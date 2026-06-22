@@ -1,7 +1,7 @@
 # Senior Java Full Stack Interview Checklist
 
 ## Overview
-This checklist helps interview candidates review the most important technical and communication skills for senior-level Java Full Stack roles.
+This checklist is designed for senior-level interview preparation. It focuses not just on theory, but on communication, design reasoning, and hands-on problem solving.
 
 ## Checklist
 - [ ] Explain OOP and SOLID principles clearly.
@@ -15,3 +15,9 @@ This checklist helps interview candidates review the most important technical an
 - [ ] Explain deployment workflows using Docker and cloud tools.
 - [ ] Walk through a real system design example.
 - [ ] Practice debugging and communication skills.
+
+## Interview Answering Tips
+- Start with a clear summary of the problem.
+- Explain the trade-offs before choosing a solution.
+- Use examples from real systems when possible.
+- Clarify assumptions before going deep into implementation.

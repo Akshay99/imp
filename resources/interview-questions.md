@@ -1,7 +1,7 @@
 # Interview Questions Index
 
 ## Overview
-This document organizes common and high-value questions by topic so candidates can practice quickly.
+This document organizes important interview questions by topic so candidates can practice quickly and systematically.
 
 ## Topic-wise Questions
 - Java: OOP, collections, streams, exceptions, JVM, GC
@@ -12,3 +12,8 @@ This document organizes common and high-value questions by topic so candidates c
 - Backend: REST APIs, authentication, scalability
 - DevOps: Docker, AWS, Kubernetes
 - System Design: caching, queues, consistency, networking
+
+## How to Practice
+- Answer each question in 1 minute, then in 3 minutes.
+- Use a small real example for every explanation.
+- Be prepared to discuss failure cases and alternatives.

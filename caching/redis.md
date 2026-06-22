@@ -1,7 +1,7 @@
 # Redis
 
 ## Overview
-Redis is an in-memory data store often used for caching, session management, rate limiting, and pub/sub.
+Redis is a popular in-memory store used for caching, rate limiting, distributed locks, and pub/sub. In interviews, strong answers should cover both benefits and limitations.
 
 ## Key Concepts
 - Strings, hashes, lists, sets, sorted sets
@@ -14,9 +14,27 @@ Redis is an in-memory data store often used for caching, session management, rat
 2. How does Redis support pub/sub?
 3. What is TTL?
 4. When should Redis be used for locking?
+5. Why is cache invalidation difficult?
+6. What is the difference between persistence and durability?
 
-## Answers
-A cache hit occurs when the data is already available in cache; a miss requires fetching it from the source. Redis pub/sub allows real-time messaging to subscribers. TTL determines how long a key remains valid. Redis locks can coordinate distributed tasks, but they require careful handling to avoid stale lock issues.
+## Detailed Answers
+### 1) Cache hit vs miss
+A cache hit means the data is found in the cache. A cache miss means the application has to fetch from the source of truth, such as a database.
+
+### 2) Pub/sub
+Redis pub/sub allows clients to subscribe to channels and receive messages in real time. It is useful for notifications and real-time updates.
+
+### 3) TTL
+TTL defines how long a key should stay valid. It helps prevent stale data and control memory usage.
+
+### 4) Redis for locking
+Redis can coordinate distributed locks but must be implemented carefully to prevent stale locks and race conditions.
+
+### 5) Cache invalidation
+Invalidation is difficult because updates may happen from multiple services or at different times. A good answer should mention TTL, event-driven invalidation, and cache-aside strategies.
+
+### 6) Persistence vs durability
+Persistence means data can survive process restarts; durability means the system is able to recover data safely after failures. Redis offers different persistence strategies depending on requirements.
 
 ## Code Examples
 ```bash
@@ -25,8 +43,8 @@ EXPIRE user:1 60
 ```
 
 ## Best Practices
-- Use cache for expensive and frequently read data.
-- Set sensible TTL values.
+- Cache expensive and frequently read data.
+- Set sensible TTLs.
 - Keep cache invalidation strategies clear.
 
 ## Common Mistakes
@@ -35,4 +53,4 @@ EXPIRE user:1 60
 - Storing too much data in memory.
 
 ## Real-World Scenarios
-A dashboard service may cache user profiles and report data to reduce database load.
+A dashboard service may cache user profiles and report data to reduce database load during peak hours.

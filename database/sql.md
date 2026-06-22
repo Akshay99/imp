@@ -1,7 +1,7 @@
 # SQL
 
 ## Overview
-SQL is the standard language for querying and managing relational data. Strong SQL skills are essential for interviews involving database design and query performance.
+SQL is one of the most important interview topics for backend roles because it shows whether you understand data modeling, retrieval, and performance trade-offs.
 
 ## Key Concepts
 - `SELECT`, `INSERT`, `UPDATE`, `DELETE`
@@ -15,9 +15,27 @@ SQL is the standard language for querying and managing relational data. Strong S
 2. What is normalization?
 3. What is the difference between `WHERE` and `HAVING`?
 4. How can you find duplicate rows?
+5. Why is indexing important for joins?
+6. What is the difference between `DELETE` and `TRUNCATE`?
 
-## Answers
-An `INNER JOIN` returns only matching rows, while a `LEFT JOIN` returns all rows from the left table and matching rows from the right table. Normalization reduces redundancy and improves data consistency. `WHERE` filters rows before grouping, and `HAVING` filters grouped data after aggregation.
+## Detailed Answers
+### 1) `INNER JOIN` vs `LEFT JOIN`
+`INNER JOIN` returns only matching rows from both tables. `LEFT JOIN` returns all rows from the left table and matching rows from the right table, filling nulls where there is no match.
+
+### 2) Normalization
+Normalization reduces redundancy and improves consistency by organizing data into related tables. It is important for avoiding duplicate and conflicting information.
+
+### 3) `WHERE` vs `HAVING`
+`WHERE` filters rows before aggregation. `HAVING` filters grouped results after aggregation.
+
+### 4) Finding duplicates
+You can use `GROUP BY` with `COUNT(*) > 1` to identify duplicate values.
+
+### 5) Indexing and joins
+Indexes can make join operations much faster by reducing the number of rows that must be scanned. Without proper indexes, joins may become slow on large datasets.
+
+### 6) `DELETE` vs `TRUNCATE`
+`DELETE` removes rows one by one and can be rolled back in a transaction. `TRUNCATE` removes all rows faster but may have stricter behavior and is often less flexible.
 
 ## Code Examples
 ```sql
@@ -29,13 +47,13 @@ WHERE o.status = 'PAID';
 
 ## Best Practices
 - Use indexes appropriately.
-- Avoid `SELECT *` when only a few columns are needed.
+- Avoid `SELECT *` when you only need a few columns.
 - Keep queries readable and deterministic.
 
 ## Common Mistakes
 - Missing join conditions.
 - Using functions on indexed columns without understanding impact.
-- Ignoring data constraints.
+- Ignoring constraints.
 
 ## Real-World Scenarios
-A reporting dashboard may use SQL aggregations to calculate revenue, order volume, and customer trends.
+A reporting dashboard may use SQL queries to calculate revenue by customer segment, daily order volume, or product performance.

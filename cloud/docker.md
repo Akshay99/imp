@@ -1,7 +1,7 @@
 # Docker
 
 ## Overview
-Docker makes it easier to package applications and their dependencies into portable containers.
+Docker is frequently discussed in interviews because it shows whether you understand packaging, portability, and deployment workflows.
 
 ## Key Concepts
 - Images and containers
@@ -15,9 +15,27 @@ Docker makes it easier to package applications and their dependencies into porta
 2. What is a Dockerfile?
 3. How do volumes help?
 4. Why are multi-stage builds useful?
+5. What is the difference between `COPY` and `ADD`?
+6. Why is immutability important for containers?
 
-## Answers
-A container shares the host OS kernel and is lighter than a VM. A Dockerfile defines how to build an image. Volumes persist data beyond the container lifecycle. Multi-stage builds reduce final image size and separate compile-time dependencies from runtime dependencies.
+## Detailed Answers
+### 1) Container vs VM
+Containers share the host OS kernel and are lighter than virtual machines. VMs include their own OS guest layer.
+
+### 2) Dockerfile
+A Dockerfile defines how an image is built, including dependencies, file copies, and startup commands.
+
+### 3) Volumes
+Volumes persist data outside the container lifecycle so important data is not lost when a container restarts.
+
+### 4) Multi-stage builds
+Multi-stage builds allow you to separate compile-time and runtime steps, resulting in smaller and cleaner final images.
+
+### 5) `COPY` vs `ADD`
+`COPY` is simpler and clearer; `ADD` has extra features like URL support and tar extraction, but it is less predictable.
+
+### 6) Immutability
+Immutable images and containers reduce drift between environments and make deployments more predictable.
 
 ## Code Examples
 ```dockerfile
@@ -39,4 +57,4 @@ CMD ["npm", "start"]
 - Ignoring startup and health checks.
 
 ## Real-World Scenarios
-A team may containerize both frontend and backend services so they run consistently across development and deployment environments.
+A team may containerize both frontend and backend services so they run consistently across development, testing, and production environments.

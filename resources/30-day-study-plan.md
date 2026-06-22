@@ -14,3 +14,8 @@ Use this guide to organize daily and weekly study blocks for a focused interview
 - Days 22-24: React, TypeScript, Node.js, REST APIs
 - Days 25-27: Docker, AWS, Kubernetes
 - Days 28-30: System design and mock interviews
+
+## Daily Practice Routine
+- 60 minutes of reading or notes
+- 30 minutes of code examples
+- 30 minutes of speaking or mock interviewing

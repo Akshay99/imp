@@ -1,7 +1,7 @@
 # High-Level Design
 
 ## Overview
-High-level design defines the overall structure of a system, including major services, data flow, and deployment choices.
+High-level design focuses on the overall architecture of a system. Interviewers often want to see how you think about components, data flow, scalability, reliability, and trade-offs.
 
 ## Key Concepts
 - System boundaries and components
@@ -14,9 +14,27 @@ High-level design defines the overall structure of a system, including major ser
 2. How do you choose between a monolith and microservices?
 3. How do you ensure scalability?
 4. What are the main trade-offs in architecture decisions?
+5. Why is observability necessary?
+6. How do you handle failure in distributed systems?
 
-## Answers
-HLD describes the big picture of the system, including components, interactions, and deployment strategy. LLD goes deeper into the implementation details. Monoliths are simpler to operate, while microservices can offer better scaling and team autonomy when the system becomes large.
+## Detailed Answers
+### 1) HLD vs LLD
+HLD looks at the big picture and main components. LLD focuses on the internals of a specific module or feature.
+
+### 2) Monolith vs microservices
+A monolith is simpler to build and operate early on. Microservices help with team independence and scaling when the system becomes complex.
+
+### 3) Ensuring scalability
+Use load balancers, caching, database optimization, queueing, and stateless services where possible.
+
+### 4) Architecture trade-offs
+Every design decision has trade-offs in complexity, cost, latency, consistency, and operational overhead.
+
+### 5) Observability
+Logs, metrics, dashboards, and tracing make it easier to diagnose production issues quickly.
+
+### 6) Failure handling
+Assume parts of the system will fail, and design for retries, timeouts, circuit breakers, and graceful degradation.
 
 ## Code Examples
 ```text
@@ -24,7 +42,7 @@ Client -> Load Balancer -> App Servers -> Database
 ```
 
 ## Best Practices
-- Align the architecture with business goals.
+- Align architecture with business goals.
 - Plan for failures and observability.
 - Document assumptions and trade-offs.
 
@@ -34,4 +52,4 @@ Client -> Load Balancer -> App Servers -> Database
 - Ignoring operational concerns.
 
 ## Real-World Scenarios
-A media platform may use cloud storage, load balancers, caching, and queues to support global traffic.
+A media platform may use CDN, load balancers, object storage, caching, and message queues to support global traffic.

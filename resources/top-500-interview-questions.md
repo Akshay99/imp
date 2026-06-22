@@ -14,3 +14,8 @@ This document consolidates a broad set of questions often used during Java Full 
 8. Frontend and TypeScript
 9. System design and cloud
 10. Git and debugging
+
+## How to Use This List
+- Start with fundamentals before moving into architecture topics.
+- Group questions by area and practice them in sequence.
+- Review the reasoning behind answers, not just keywords.

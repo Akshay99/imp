@@ -1,11 +1,11 @@
 # Microservices
 
 ## Overview
-Microservices break a large system into smaller, independently deployable services that communicate through APIs or events.
+Microservices are a common interview topic because they represent a major architectural decision. Strong answers should explain both the benefits and the operational complexity involved.
 
 ## Key Concepts
 - Service boundaries
-- API gateways
+- API gateway
 - Service discovery
 - Resilience and circuit breakers
 - Distributed tracing
@@ -16,9 +16,27 @@ Microservices break a large system into smaller, independently deployable servic
 2. What are the challenges of microservices?
 3. What is an API gateway?
 4. How do you handle eventual consistency?
+5. Why is observability important in microservices?
+6. What is the difference between synchronous and asynchronous communication?
 
-## Answers
-Microservices allow teams to deploy independently and scale different parts of the system separately. They add complexity in network calls, monitoring, deployment, and data consistency. An API gateway centralizes routing and authentication. Eventual consistency is common, so systems should tolerate temporary data divergence.
+## Detailed Answers
+### 1) Advantages
+Microservices allow independent deployment, team ownership, and better scaling of specific components. They make it easier to isolate failures to a smaller part of the system.
+
+### 2) Challenges
+They introduce network complexity, distributed debugging, repeated infrastructure concerns, and potential data consistency issues.
+
+### 3) API gateway
+An API gateway sits in front of microservices and handles routing, authentication, request aggregation, and rate limiting.
+
+### 4) Eventual consistency
+Because services can have separate databases, data may temporarily be inconsistent. The system must tolerate that and reconcile states asynchronously.
+
+### 5) Observability
+In distributed systems, logs, metrics, and traces are essential for detecting failures and understanding request flow.
+
+### 6) Sync vs async communication
+Synchronous calls are simple but can create coupling and delays. Asynchronous communication improves resilience but requires careful handling of retries and message ordering.
 
 ## Code Examples
 ```text
@@ -36,4 +54,4 @@ Client -> API Gateway -> Order Service -> Inventory Service
 - Missing monitoring and tracing.
 
 ## Real-World Scenarios
-A retailer may split order, payment, inventory, and notification processing into services that work together asynchronously.
+A retail platform may split order, payment, inventory, and notification flows into separate services that communicate through APIs and events.

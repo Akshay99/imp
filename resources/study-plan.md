@@ -12,3 +12,8 @@ This study plan helps structure interview preparation across several weeks.
 - Week 6: React, TypeScript, REST APIs, and Node.js
 - Week 7: Docker, AWS, Kubernetes, and system design
 - Week 8: Mock interviews and revision
+
+## Weekly Review Method
+- Revisit notes from the previous week.
+- Practice explaining topics aloud.
+- Solve one coding problem per week.

@@ -1,7 +1,7 @@
 # Git
 
 ## Overview
-Git is the standard version control tool used to track code changes, coordinate collaboration, and manage release workflows.
+Git is essential for collaboration and release management. In interviews, it is important to explain how branches, merges, conflict resolution, and pull requests work in practice.
 
 ## Key Concepts
 - Repository, commit, branch, merge, rebase
@@ -14,9 +14,27 @@ Git is the standard version control tool used to track code changes, coordinate 
 2. What is a pull request?
 3. How do you resolve merge conflicts?
 4. What is `git stash` used for?
+5. Why is commit history important?
+6. What is the difference between `git fetch` and `git pull`?
 
-## Answers
-`git merge` preserves history while integrating branches, while `git rebase` rewrites commit history for a cleaner linear flow. A pull request is a review process for proposed changes. Merge conflicts occur when different changes touch the same lines. `git stash` temporarily saves uncommitted work.
+## Detailed Answers
+### 1) Merge vs rebase
+`git merge` keeps history and integrates branches. `git rebase` rewrites commit history to create a cleaner line of development, but requires caution when sharing branches.
+
+### 2) Pull request
+A pull request is a review mechanism where one team member proposes changes and others review them before merging.
+
+### 3) Merge conflicts
+Merge conflicts happen when two branches change the same lines. The resolution requires manually choosing the correct final content.
+
+### 4) `git stash`
+`git stash` temporarily stores changes so you can work on something else without losing progress.
+
+### 5) Commit history
+A clean commit history helps with debugging, release planning, and understanding why a change was made.
+
+### 6) Fetch vs pull
+`git fetch` downloads remote updates without merging them. `git pull` fetches and immediately merges.
 
 ## Code Examples
 ```bash

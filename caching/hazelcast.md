@@ -1,7 +1,7 @@
 # Hazelcast
 
 ## Overview
-Hazelcast provides distributed in-memory computing and caching capabilities for scalable applications.
+Hazelcast is a distributed in-memory platform used for caching, clustering, and low-latency shared state. It is especially relevant when multiple application nodes need near-real-time access to the same data.
 
 ## Key Concepts
 - Distributed maps
@@ -15,9 +15,27 @@ Hazelcast provides distributed in-memory computing and caching capabilities for 
 2. How does Hazelcast improve scalability?
 3. What is a near cache?
 4. When is Hazelcast useful?
+5. Why is partitioning important?
+6. How does Hazelcast handle cluster failures?
 
-## Answers
-A distributed map stores data across cluster members so multiple nodes can access shared state. Hazelcast improves scalability by allowing data to be shared low-latency across instances. A near cache keeps frequently used data closer to the application. It is useful when shared in-memory state matters for performance.
+## Detailed Answers
+### 1) Distributed map
+A distributed map stores data across nodes so that the cluster behaves like one shared memory layer.
+
+### 2) Scalability
+Hazelcast reduces bottlenecks by distributing data and computation across nodes, making it easier to scale horizontally.
+
+### 3) Near cache
+A near cache keeps frequently accessed data closer to the application node, reducing latency.
+
+### 4) When Hazelcast is useful
+It is useful when applications need low-latency shared state, distributed locks, or coordinated caching across multiple instances.
+
+### 5) Partitioning
+Partitioning distributes data across cluster members so that the system can scale and balance load.
+
+### 6) Handling failures
+Hazelcast supports cluster membership and failover behavior, which is important for resilience in production.
 
 ## Code Examples
 ```text
@@ -35,4 +53,4 @@ Client -> Hazelcast Cluster -> Distributed Map
 - Ignoring memory pressure and eviction.
 
 ## Real-World Scenarios
-A high-throughput application may use Hazelcast to share session or lookup data across nodes.
+A high-traffic application may use Hazelcast to share session or lookup data across nodes while keeping latency low.
