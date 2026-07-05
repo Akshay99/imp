@@ -11,13 +11,7 @@ Core Java is the foundation of almost every backend and full-stack interview. It
 - Strings, immutability, and memory model basics
 - Exception handling and error propagation
 
-## Frequently Asked Interview Questions
-1. What is the difference between abstraction and encapsulation?
-2. What is method overloading vs overriding?
-3. What is the difference between `==` and `.equals()`?
-4. Why are strings immutable?
-5. What is the difference between checked and unchecked exceptions?
-6. Why is composition often preferred over inheritance?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Abstraction vs encapsulation

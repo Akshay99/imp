@@ -10,13 +10,7 @@ Kubernetes is a major interview topic for cloud and platform roles because it te
 - Ingress and networking
 - Rolling updates and scaling
 
-## Frequently Asked Interview Questions
-1. What is the difference between a pod and a container?
-2. What is a deployment?
-3. What is the purpose of a service?
-4. How do rolling updates work?
-5. What is the difference between ConfigMap and Secret?
-6. Why are readiness and liveness probes important?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Pod vs container

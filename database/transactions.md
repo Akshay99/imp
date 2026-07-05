@@ -10,13 +10,7 @@ Transactions are central to reliability in data systems. Interviewers want to kn
 - Savepoints
 - Deadlocks
 
-## Frequently Asked Interview Questions
-1. What does ACID stand for?
-2. What is the difference between commit and rollback?
-3. What is an isolation level?
-4. What is a deadlock?
-5. Why should transactions be short?
-6. What is the difference between optimistic and pessimistic locking?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) ACID

@@ -11,13 +11,7 @@ Spring Core is the foundation of the Spring ecosystem. In interviews, a strong a
 - Bean scopes
 - Autowiring
 
-## Frequently Asked Interview Questions
-1. What is dependency injection?
-2. What is the difference between `@Component`, `@Service`, and `@Repository`?
-3. What are bean scopes in Spring?
-4. What is constructor injection?
-5. What is the difference between BeanFactory and ApplicationContext?
-6. Why is Spring considered loosely coupled?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Dependency injection

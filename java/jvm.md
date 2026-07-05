@@ -11,13 +11,7 @@ The JVM is important because it determines how Java code executes, how memory is
 - Method area and metaspace
 - Bytecode execution
 
-## Frequently Asked Interview Questions
-1. What is the difference between heap and stack memory?
-2. What is garbage collection?
-3. What are the major garbage collectors?
-4. Why is the JVM platform-independent?
-5. What is the role of the JIT compiler?
-6. What is the difference between `new` object creation and object pooling?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Heap vs stack

@@ -10,13 +10,7 @@ Spring MVC is the request-handling layer for web applications in the Spring ecos
 - Validation and exception handling
 - `@RequestBody` and `@ResponseBody`
 
-## Frequently Asked Interview Questions
-1. What is the role of `@Controller`?
-2. How does request mapping work?
-3. What is the difference between `@RequestBody` and `@ModelAttribute`?
-4. How do you validate user input?
-5. Why should controllers stay thin?
-6. What is the difference between `@RestController` and `@Controller`?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `@Controller`

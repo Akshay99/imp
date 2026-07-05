@@ -9,13 +9,7 @@ Git is essential for collaboration and release management. In interviews, it is 
 - Conflicts and resolution
 - Cherry-pick and stash
 
-## Frequently Asked Interview Questions
-1. What is the difference between `git merge` and `git rebase`?
-2. What is a pull request?
-3. How do you resolve merge conflicts?
-4. What is `git stash` used for?
-5. Why is commit history important?
-6. What is the difference between `git fetch` and `git pull`?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Merge vs rebase

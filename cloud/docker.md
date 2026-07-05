@@ -10,13 +10,7 @@ Docker is frequently discussed in interviews because it shows whether you unders
 - Docker Compose
 - Multi-stage builds
 
-## Frequently Asked Interview Questions
-1. What is the difference between a container and a virtual machine?
-2. What is a Dockerfile?
-3. How do volumes help?
-4. Why are multi-stage builds useful?
-5. What is the difference between `COPY` and `ADD`?
-6. Why is immutability important for containers?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Container vs VM

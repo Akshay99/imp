@@ -10,13 +10,7 @@ Spring Security is essential for protecting applications. In interviews, you sho
 - JWT and OAuth2 basics
 - CSRF protection
 
-## Frequently Asked Interview Questions
-1. What is the difference between authentication and authorization?
-2. How does JWT work?
-3. What is CSRF?
-4. How do you secure REST APIs?
-5. Why should passwords be hashed?
-6. What is the difference between roles and permissions?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Authentication vs authorization

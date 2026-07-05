@@ -10,13 +10,7 @@ REST APIs are a core part of modern systems. Strong interview responses should e
 - Authentication and authorization
 - Idempotency and versioning
 
-## Frequently Asked Interview Questions
-1. What is the difference between `PUT` and `PATCH`?
-2. What are common HTTP status codes?
-3. What is idempotency?
-4. How do you version an API?
-5. Why should APIs return consistent error structures?
-6. What is pagination and why is it needed?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `PUT` vs `PATCH`

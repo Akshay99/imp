@@ -11,13 +11,7 @@ Multithreading is a key interview topic because most modern systems must handle 
 - `CompletableFuture`
 - Thread safety
 
-## Frequently Asked Interview Questions
-1. What is the difference between `Runnable` and `Callable`?
-2. What is a deadlock?
-3. What is the difference between `wait()` and `sleep()`?
-4. How does `ExecutorService` help with concurrency?
-5. What are race conditions?
-6. Why are immutable objects useful in multithreaded code?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `Runnable` vs `Callable`

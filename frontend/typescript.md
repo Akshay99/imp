@@ -10,13 +10,7 @@ TypeScript is important because it improves code safety, developer productivity,
 - Type inference
 - Utility types
 
-## Frequently Asked Interview Questions
-1. What is the difference between `interface` and `type`?
-2. What are generics?
-3. What is the benefit of type inference?
-4. How does `unknown` differ from `any`?
-5. What is a union type?
-6. Why is TypeScript useful in large applications?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `interface` vs `type`

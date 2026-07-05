@@ -10,13 +10,7 @@ Node.js is commonly used to build APIs and tooling. Interview answers should cov
 - Streams
 - Error handling
 
-## Frequently Asked Interview Questions
-1. What is the event loop?
-2. Why is Node.js non-blocking?
-3. What is the difference between synchronous and asynchronous code?
-4. How do you handle errors in Node.js?
-5. Why is Node.js good for I/O-heavy applications?
-6. What are streams used for?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Event loop

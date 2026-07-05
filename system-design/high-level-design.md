@@ -9,13 +9,7 @@ High-level design focuses on the overall architecture of a system. Interviewers 
 - Security and observability
 - Data flow and communication patterns
 
-## Frequently Asked Interview Questions
-1. What is the difference between HLD and LLD?
-2. How do you choose between a monolith and microservices?
-3. How do you ensure scalability?
-4. What are the main trade-offs in architecture decisions?
-5. Why is observability necessary?
-6. How do you handle failure in distributed systems?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) HLD vs LLD

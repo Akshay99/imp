@@ -9,13 +9,7 @@ Design patterns are reusable ideas for solving common design challenges. In inte
 - Behavioral patterns: Observer, Strategy, Template Method
 - SOLID principles
 
-## Frequently Asked Interview Questions
-1. What is the difference between a factory and a builder?
-2. When should you use a singleton?
-3. What is dependency injection?
-4. How do you decide between strategy and template method?
-5. Why is the open-closed principle important?
-6. What is the difference between adapter and facade?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Factory vs builder

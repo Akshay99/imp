@@ -11,13 +11,7 @@ React is a core frontend topic because it tests whether you understand component
 - Rendering and reconciliation
 - Performance optimization
 
-## Frequently Asked Interview Questions
-1. What is the difference between props and state?
-2. What are React hooks?
-3. What is reconciliation?
-4. How do you optimize React performance?
-5. Why are keys important in lists?
-6. What is the difference between controlled and uncontrolled components?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Props vs state

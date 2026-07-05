@@ -10,13 +10,7 @@ Low-level design focuses on the detailed implementation decisions behind a speci
 - API contracts and error handling
 - Design patterns and extensibility
 
-## Frequently Asked Interview Questions
-1. What is the difference between HLD and LLD?
-2. How do you design a cache for a system?
-3. How do you structure service classes?
-4. How do you handle extensibility?
-5. Why are interfaces useful in LLD?
-6. How do you approach edge cases in design?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) HLD vs LLD

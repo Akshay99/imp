@@ -11,13 +11,7 @@ Spring Boot reduces setup overhead and helps teams ship applications faster. Int
 - Actuator
 - Externalized configuration
 
-## Frequently Asked Interview Questions
-1. What is the advantage of Spring Boot over traditional Spring?
-2. What is auto-configuration?
-3. How do profiles help in deployment?
-4. What is the role of `application.properties`?
-5. Why is Spring Boot useful for microservices?
-6. What is the difference between `@SpringBootTest` and unit tests?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Advantage over traditional Spring

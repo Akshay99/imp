@@ -10,13 +10,7 @@ The Java Collections Framework is heavily used in interviews because every appli
 - `HashMap`, `LinkedHashMap`, `TreeMap`
 - Iteration, sorting, and comparison strategies
 
-## Frequently Asked Interview Questions
-1. What is the difference between `ArrayList` and `LinkedList`?
-2. When should you use `HashMap` instead of `TreeMap`?
-3. What is the difference between `HashSet` and `TreeSet`?
-4. How does `ConcurrentHashMap` work?
-5. What is the difference between `Comparable` and `Comparator`?
-6. Why should you avoid modifying a collection while iterating?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `ArrayList` vs `LinkedList`

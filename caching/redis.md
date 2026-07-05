@@ -9,13 +9,7 @@ Redis is a popular in-memory store used for caching, rate limiting, distributed 
 - Persistence modes
 - Pub/sub and distributed locks
 
-## Frequently Asked Interview Questions
-1. What is a cache hit vs cache miss?
-2. How does Redis support pub/sub?
-3. What is TTL?
-4. When should Redis be used for locking?
-5. Why is cache invalidation difficult?
-6. What is the difference between persistence and durability?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Cache hit vs miss

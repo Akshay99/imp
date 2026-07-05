@@ -10,13 +10,7 @@ JavaScript is central to frontend and full-stack development. Interviewers often
 - Prototypes and inheritance
 - Hoisting and modules
 
-## Frequently Asked Interview Questions
-1. What is a closure?
-2. What is the difference between `var`, `let`, and `const`?
-3. How does the event loop work?
-4. What is the difference between promises and callbacks?
-5. What is hoisting?
-6. What is the difference between shallow copy and deep copy?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Closure

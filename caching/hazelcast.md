@@ -10,13 +10,7 @@ Hazelcast is a distributed in-memory platform used for caching, clustering, and 
 - Data partitioning
 - Distributed locks
 
-## Frequently Asked Interview Questions
-1. What is a distributed map?
-2. How does Hazelcast improve scalability?
-3. What is a near cache?
-4. When is Hazelcast useful?
-5. Why is partitioning important?
-6. How does Hazelcast handle cluster failures?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Distributed map

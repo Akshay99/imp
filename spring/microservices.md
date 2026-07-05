@@ -11,13 +11,7 @@ Microservices are a common interview topic because they represent a major archit
 - Distributed tracing
 - Data ownership
 
-## Frequently Asked Interview Questions
-1. What are the advantages of microservices?
-2. What are the challenges of microservices?
-3. What is an API gateway?
-4. How do you handle eventual consistency?
-5. Why is observability important in microservices?
-6. What is the difference between synchronous and asynchronous communication?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) Advantages

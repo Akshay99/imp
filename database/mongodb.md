@@ -10,13 +10,7 @@ MongoDB is a document-oriented database that is widely used when schema flexibil
 - Sharding and replication
 - Query patterns
 
-## Frequently Asked Interview Questions
-1. When would you choose MongoDB over SQL?
-2. What is an embedded document?
-3. What is aggregation in MongoDB?
-4. What is sharding?
-5. Why is schema design important in MongoDB?
-6. What is the difference between a document and a row?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) MongoDB vs SQL

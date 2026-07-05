@@ -10,13 +10,7 @@ Spring Data JPA simplifies database access and is a common interview topic becau
 - Lazy vs eager loading
 - JPQL and native queries
 
-## Frequently Asked Interview Questions
-1. What is the difference between JPA and Hibernate?
-2. What is the difference between `findById` and `getReference`?
-3. What is lazy loading?
-4. Why is transaction management important?
-5. What is the N+1 problem?
-6. How do you avoid fetching too much data?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) JPA vs Hibernate

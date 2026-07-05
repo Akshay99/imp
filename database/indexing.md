@@ -10,13 +10,7 @@ Indexing is crucial for performance because it helps the database locate rows fa
 - Selectivity and query planning
 - Covering indexes
 
-## Frequently Asked Interview Questions
-1. What is an index?
-2. Why can too many indexes hurt performance?
-3. What is a composite index?
-4. What is a covering index?
-5. How do you know if an index is useful?
-6. When should you avoid an index?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) What is an index?

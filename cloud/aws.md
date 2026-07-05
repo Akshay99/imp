@@ -10,13 +10,7 @@ AWS is a common cloud platform in interviews because it tests understanding of c
 - Networking basics
 - Monitoring and cost efficiency
 
-## Frequently Asked Interview Questions
-1. What is the difference between EC2 and Lambda?
-2. What is IAM?
-3. How does S3 differ from EBS?
-4. What is the role of a load balancer?
-5. Why is least-privilege access important?
-6. What is the difference between vertical and horizontal scaling?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) EC2 vs Lambda

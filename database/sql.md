@@ -10,13 +10,7 @@ SQL is one of the most important interview topics for backend roles because it s
 - Constraints and keys
 - Normalization
 
-## Frequently Asked Interview Questions
-1. What is the difference between `INNER JOIN` and `LEFT JOIN`?
-2. What is normalization?
-3. What is the difference between `WHERE` and `HAVING`?
-4. How can you find duplicate rows?
-5. Why is indexing important for joins?
-6. What is the difference between `DELETE` and `TRUNCATE`?
+## Frequently Asked Interview Questions (moved to spring-questions.md)
 
 ## Detailed Answers
 ### 1) `INNER JOIN` vs `LEFT JOIN`
