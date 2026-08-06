@@ -1,226 +1,121 @@
-```python
-import os
+Mastercard’s coding interviews and Online Assessments (OAs) focus heavily on **core data structures, optimal pattern recognition, and readable implementation** rather than esoteric "gotcha" algorithms.
 
-markdown_content = """# Mastercard Software Engineering Interview Preparation Guide
-
-This comprehensive guide covers the primary algorithmic patterns, technical deep dives, system design principles, and interview strategies evaluated during technical assessments and coding rounds at Mastercard.
+Historically, Mastercard’s algorithmic question mix sits around **45% Easy, 50% Medium, and under 5% Hard**. The focus is on clean edge-case handling, optimal Big-O performance, and explaining your thought process clearly.
 
 ---
 
-## 1. Interview Process Overview
-
-Mastercard evaluates candidates across technical competency, code quality, software architecture, and problem-solving fundamentals.
-
+## 1. Primary Algorithm Patterns Tested
 
 ```
-
-┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐     ┌──────────────────┐
-│ Online           │     │ Technical Round 1│     │ Technical Round 2│     │ Technical Round 3│
-│ Assessment (OA)  ├────>│ Live Coding &    ├────>│ System Design &  ├────>│ Leadership &     │
-│ Algorithmic DSA  │     │ Core Fundamentals│     │ Architecture     │     │ Culture Fit      │
-└──────────────────┘     └──────────────────┘     └──────────────────┘     └──────────────────┘
-
-```
-
-* **Difficulty Mix:** ~45% Easy, ~50% Medium, <5% Hard.
-* **Core Philosophy:** Focus on practical, production-grade problem solving, optimal Big-O complexity, clean modular code, and thorough edge-case handling.
-
----
-
-## 2. High-Frequency Algorithmic Patterns & Questions
-
-### Summary Matrix
-
-| Pattern / Category | Problem Example | Time Complexity | Space Complexity | Common Application |
-| :--- | :--- | :--- | :--- | :--- |
-| **Hash Table & Two Pointers** | Two Sum / Target Match | $\\mathcal{O}(N)$ | $\\mathcal{O}(N)$ | Ledger reconciliation, transaction matching |
-| **In-Place Array** | Remove Duplicates | $\\mathcal{O}(N)$ | $\\mathcal{O}(1)$ | Buffer cleanup, stream deduplication |
-| **Sliding Window** | Max Subarray (Kadane's) | $\\mathcal{O}(N)$ | $\\mathcal{O}(1)$ | Volatility tracking, window aggregations |
-| **2D Matrix Manipulation** | Rotate Image 90° | $\\mathcal{O}(N^2)$ | $\\mathcal{O}(1)$ | Grid processing, transformation logic |
-| **Stack & Parsing** | Valid Parentheses | $\\mathcal{O}(N)$ | $\\mathcal{O}(N)$ | Payload validation, syntax checking |
-| **Modified Binary Search** | Search in Rotated Array | $\\mathcal{O}(\\log N)$ | $\\mathcal{O}(1)$ | Log file indexing, partitioned lookup |
-| **Dynamic Programming** | Coin Change | $\\mathcal{O}(S \\cdot N)$ | $\\mathcal{O}(S)$ | Payment denomination optimization |
-| **Greedy Logic** | Gas Station Circuit | $\\mathcal{O}(N)$ | $\\mathcal{O}(1)$ | Pipeline routing, balance evaluation |
-
----
-
-### Key Implementations
-
-#### A. Two Sum / Transaction Matching
-```python
-def two_sum(nums: list[int], target: int) -> list[int]:
-    \"\"\"
-    Finds indices of two numbers that sum up to target.
-    Time Complexity: O(N)
-    Space Complexity: O(N)
-    \"\"\"
-    seen = {}
-    for idx, val in enumerate(nums):
-        complement = target - val
-        if complement in seen:
-            return [seen[complement], idx]
-        seen[val] = idx
-    return []
-
-```
-
-#### B. Kadane's Algorithm (Maximum Subarray Sum)
-
-```python
-def max_sub_array(nums: list[int]) -> int:
-    \"\"\"
-    Calculates the maximum contiguous subarray sum.
-    Time Complexity: O(N)
-    Space Complexity: O(1)
-    \"\"\"
-    max_so_far = nums[0]
-    current_max = nums[0]
-    
-    for i in range(1, len(nums)):
-        current_max = max(nums[i], current_max + nums[i])
-        max_so_far = max(max_so_far, current_max)
-        
-    return max_so_far
-
-```
-
-#### C. Valid Parentheses Check
-
-```python
-def is_valid_expression(s: str) -> bool:
-    \"\"\"
-    Validates proper closure and order of brackets.
-    Time Complexity: O(N)
-    Space Complexity: O(N)
-    \"\"\"
-    stack = []
-    mapping = {')': '(', '}': '{', ']': '['}
-    
-    for char in s:
-        if char in mapping:
-            top_element = stack.pop() if stack else '#'
-            if mapping[char] != top_element:
-                return False
-        else:
-            stack.append(char)
-            
-    return not stack
+         ┌────────────────────────────────────────────────────────┐
+         │              Mastercard Question Frequency             │
+         ├────────────────────────────────────────────────────────┤
+         │  Array & Hash Maps  ██████████████████████████ 67%     │
+         │  String Operations  ███████████████ 33%                │
+         │  Dynamic Programming███████████ 25%                    │
+         │  Greedy & Two Pointer██████████ 25%                    │
+         │  Stacks & Queues    ███████ 17%                        │
+         └────────────────────────────────────────────────────────┘
 
 ```
 
 ---
 
-## 3. Practical Platform & Production Engineering Topics
+## 2. High-Frequency Mastercard Coding Questions
 
-In senior and intermediate technical rounds, questions transition from theoretical DSA to real-world language mechanics and framework behaviors:
+### A. Arrays & Hash Tables
 
-### A. Java & Runtime Mechanics
-
-* **JVM Memory Architecture:**
-* **Heap Space:** Stores objects and class instances. Managed by Garbage Collection (Young Generation, Old Generation).
-* **Stack Space:** Stores local variables, primitive values, and frame executions for threads.
-* **Metaspace:** Holds class metadata, runtime constant pool, and method data.
+1. **Two Sum / Target Pair Matching**
+* *Problem:* Find two numbers in an array that add up to a target sum.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(N)$ Space using a Hash Map.
+* *Mastercard Nuance:* Often framed around matching financial transactions or balancing ledger amounts.
 
 
-* **HashMap Mechanics:**
-* Computes index via `(n - 1) & hash`.
-* Handles collisions using linked lists; transforms buckets into Red-Black Trees when bucket capacity exceeds `TREEIFY_THRESHOLD = 8` to guarantee $\mathcal{O}(\log N)$ operations.
+2. **Remove Duplicates from Sorted Array**
+* *Problem:* Modify an array in-place to remove duplicates and return the new length.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(1)$ Space using Two Pointers.
 
 
-* **Concurrency & Locking:**
-* Comparison of `synchronized` vs. `ReentrantLock`.
-* Thread-safe object usage using `AtomicInteger`, `ConcurrentHashMap`, and `CopyOnWriteArrayList`.
+3. **Subarray / Sliding Window (Maximum Subarray - Kadane’s Algorithm)**
+* *Problem:* Find the contiguous subarray with the largest sum.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(1)$ Space.
 
 
-
-### B. Java 8 Streams & Functional Pipelines
-
-* Filtering, grouping, and reducing transaction objects:
-
-```java
-// Example: Group transactions by currency and calculate total sum
-Map<String, Double> totalPerCurrency = transactions.stream()
-    .collect(Collectors.groupingBy(
-        Transaction::getCurrency,
-        Collectors.summingDouble(Transaction::getAmount)
-    ));
-
-```
-
----
-
-## 4. High-Availability & Payment System Design Concepts
-
-Mastercard systems process millions of financial requests per second globally. System design conversations focus on reliability, low latency, and operational consistency.
-
-### Core Architecture Patterns
-
-1. **Idempotency in API Requests:**
-* Preventing double charges using unique idempotency keys stored in distributed caches (e.g., Redis) with TTL and database-level unique constraints.
-
-
-2. **Strangler Fig Pattern:**
-* Safely migrating legacy monolithic payment systems to modern microservices step-by-step behind an API Gateway.
-
-
-3. **Distributed Locking & Caching:**
-* Using Redis/Redlock for resource reservation without race conditions.
-
-
-4. **Data Tiering & Partitioning:**
-* SQL Database Indexing strategies for horizontal scalability vs. NoSQL partitioning based on Account / Merchant IDs.
+4. **Rotate Image / Matrix Transformation**
+* *Problem:* Rotate an $N \times N$ 2D matrix by 90 degrees clockwise in-place.
+* *Optimal Complexity:* $\mathcal{O}(N^2)$ Time via matrix transpose and row reversal.
 
 
 
 ---
 
-## 5. Candidate Checklist for Live Coding Rounds
+### B. String Manipulation & Sliding Window
 
-* [ ] State time and space complexity explicitly before writing code.
-* [ ] Discuss brute-force solutions first, then present optimized strategies.
-* [ ] Communicate thought process out loud throughout the session.
-* [ ] Proactively address edge cases:
-* [ ] Empty inputs / `null` values
-* [ ] Single element arrays
-* [ ] Duplicate values
-* [ ] Integer overflow / boundary conditions
+1. **Valid Parentheses / Expression Matching**
+* *Problem:* Check if opening and closing brackets `()`, `{}`, `[]` are balanced and in valid sequence.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(N)$ Space using a Stack.
 
 
-* [ ] Structure modular, well-named functions following production coding standards.
-"""
-
-file_path = "Mastercard_Algorithm_Preparation_Guide.md"
-with open(file_path, "w", encoding="utf-8") as f:
-f.write(markdown_content)
-
-print(f"File saved as: {file_path}")
-
-```
-
-```text?code_stdout&code_event_index=1
-File saved as: Mastercard_Algorithm_Preparation_Guide.md
+2. **Longest Substring Without Repeating Characters**
+* *Problem:* Find the length of the longest substring containing unique characters.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time using a Sliding Window with a Hash Set.
 
 
-```
-
-Your Markdown file is ready
-
-
-I have created a Markdown guide titled **`Mastercard_Algorithm_Preparation_Guide.md`**.
-
-### What is included in the file:
-
-1. **Interview Process Overview:** Stage breakdown (OA, Technical 1 & 2, System Design, Behavioral) with difficulty metrics and core interview philosophies.
-2. **High-Frequency Algorithmic Patterns:**
-* A summary comparison table with time/space complexities and financial domain applications.
-* Annotated implementations for top question types (Two Sum, Kadane’s Algorithm, Valid Parentheses).
+3. **Valid Anagram & Palindrome Checks**
+* *Problem:* Verify if one string is an anagram of another, or if a string reads the same backward after stripping non-alphanumeric characters.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(1)$ auxiliary space with character frequency tables.
 
 
-3. **Platform & Production Engineering Deep-Dives:**
-* JVM memory structure (Heap, Stack, Metaspace) and Garbage Collection dynamics.
-* Java `HashMap` collision resolution and treeification logic.
-* Functional Stream operations for data processing/aggregation.
+
+---
+
+### C. Search & Two-Pointer Algorithms
+
+1. **Search in Rotated Sorted Array**
+* *Problem:* Given an array rotated at some pivot, search for a target value in $\mathcal{O}(\log N)$ time.
+* *Key Concept:* Modified Binary Search identifying which half of the array is strictly sorted.
 
 
-4. **Payment System Design Patterns:** Key patterns including Idempotency, Strangler Fig pattern for legacy refactoring, and distributed locking strategies.
-5. **Interview Execution Checklist:** Practical steps to follow during technical live-coding assessments (trade-off communication, edge-case analysis, and Big-O evaluation).
+2. **Container With Most Water**
+* *Problem:* Given array heights, find two lines that together with the x-axis form a container holding the most water.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time using inward Two Pointers.
+
+
+
+---
+
+### D. Dynamic Programming & Greedy Algorithms
+
+1. **Best Time to Buy and Sell Stock**
+* *Problem:* Maximize profit from buying on one day and selling on a future day.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time, $\mathcal{O}(1)$ Space tracking running minimum price.
+
+
+2. **Coin Change Problem**
+* *Problem:* Find the minimum number of coins needed to make a specific amount.
+* *Optimal Complexity:* $\mathcal{O}(S \cdot N)$ where $S$ is the amount and $N$ is the number of coin denominations (using 1D DP tabulation).
+
+
+3. **Gas Station / Circuit Traversal**
+* *Problem:* Determine starting gas station index to complete a full circular route.
+* *Optimal Complexity:* $\mathcal{O}(N)$ Time using Greedy tracking of net total vs. current tank balance.
+
+
+
+---
+
+## 3. Practical Platform Logic Questions (Java / Backend Roles)
+
+In technical live-coding rounds, Mastercard often shifts from abstract DSA to practical code manipulation tasks:
+
+* **Functional Collections Operations:** Using Java 8 Streams to group, aggregate, or filter custom objects (e.g., *Group transactions by currency and calculate total sum* or *Find top 3 frequent numbers/strings*).
+* **LRU Cache Implementation:** Implementing a Least Recently Used cache combining a `HashMap` and `DoublyLinkedList` in $\mathcal{O}(1)$ time.
+* **Custom Thread-Safe Counter / Singleton:** Writing thread-safe implementations using `ReentrantLock` or `AtomicInteger`.
+
+---
+
+## Key Tips for Clearing the Mastercard Technical Round
+
+1. **State Trade-offs Out Loud:** Always mention your initial brute-force approach first, then explain how moving from $\mathcal{O}(N^2)$ to $\mathcal{O}(N)$ or $\mathcal{O}(N \log N)$ optimizes space/time.
+2. **Proactively Test Edge Cases:** Before running your code, test empty inputs, single-element arrays, duplicate values, and negative integers.
+3. **Prioritize Code Cleanliness:** Use descriptive variable names, avoid monolithic functions, and structure modular helper methods.
