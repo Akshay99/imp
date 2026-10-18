@@ -1,0 +1,12 @@
+𝗛𝗼𝘄 𝗱𝗼 𝘆𝗼𝘂 𝗵𝗮𝗻𝗱𝗹𝗲 𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝘀 𝗶𝗻 𝗦𝗽𝗿𝗶𝗻𝗴 𝗕𝗼𝗼𝘁?
+
+ - Most people answer: put @Transactional on the service method, and if anything fails, everything rolls back.
+ - That second part is how a transfer ends up with a debit and no credit.
+
+𝗧𝗵𝗲 𝟲 𝗳𝗼𝗹𝗹𝗼𝘄-𝘂𝗽𝘀 𝘁𝗼 𝗯𝗲 𝗿𝗲𝗮𝗱𝘆 𝗳𝗼𝗿:
+1. transfer() calls debit() and credit() in the same class. Both have @Transactional, transfer() doesn't. The credit fails. Is the debit undone?
+2. transfer() is @Transactional. The credit step throws a checked exception after the debit ran. Does the debit roll back?
+3. Your @Transactional method calls another bean's @Transactional method, which throws. You catch it and carry on. Why does the commit fail with UnexpectedRollbackException?
+4. The transfer sends a "money received" SMS, then the transaction rolls back. How do you stop the SMS?
+5. Inside the transaction you call a payment gateway that takes 8 seconds. What happens to a pool of 10 connections at 50 requests a second?
+6. Two withdrawals of 500 hit an account holding 1,000 at the same moment, each in its own @Transactional method. Both read 1,000 and both write 500. Why is the balance 500 and not 0?
